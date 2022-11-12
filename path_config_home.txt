@@ -1,1 +1,6 @@
 .bashrc
+.profile
+.xinitrc
+.Xauthority
+.gtkrc-2.0
+.Xresources

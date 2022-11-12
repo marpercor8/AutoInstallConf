@@ -2,3 +2,4 @@ qtile
 alacritty
 trizen
 pycritty
+fish

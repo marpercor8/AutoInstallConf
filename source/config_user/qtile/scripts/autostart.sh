@@ -22,9 +22,9 @@ albert &
 picom --config .config/picom/picom-blur.conf --experimental-backends &
 #/usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1 &
 dunst &
-feh --randomize --bg-fill /usr/share/backgrounds/archlinux/*
+feh --randomize --bg-fill /usr/share/wallpapers/garuda-wallpapers/*
 #starting user applications at boot time
-#run volumeicon &
+run volumeicon &
 #run discord &
 #nitrogen --random --set-zoom-fill &
 #run caffeine -a &

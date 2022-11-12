@@ -21,9 +21,9 @@ def install_packages():
         for l in f:
             os.system("trizen -Syua {}".format(l))
 
+  
 
-def load_config_user():
-    pass
+
 
 def copy_config_dir_user():
     with open(CONFIG_LIST_DIR, "r") as f:
@@ -45,7 +45,15 @@ def copy_config_user_homedir():
 def copy_all_packages():
     os.system("pacman -Qe | awk '{print $1}'" + "> {}/{}".format(LOCAL_DIRECTORY,PACKAGE_LIST))
 
+
+
+def load_config_user():
+    copy_config_dir_user()
+    copy_config_user_homedir()
+    #copy_all_packages()
+
 if __name__ == '__main__':
     main()
-    
+
+    load_config_user()
 

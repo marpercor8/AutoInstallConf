@@ -50,7 +50,7 @@ mod2 = "control"
 home = os.path.expanduser('~')
 
 
-navegador = "firefoxdawd"
+navegador = "firefox"
 
 
 @lazy.function
@@ -74,6 +74,7 @@ def switch_screens(qtile):
 myTerm = "alacritty" # My terminal of choice
 
 keys = [
+
 
 
 # SUPER + FUNCTION KEYS
