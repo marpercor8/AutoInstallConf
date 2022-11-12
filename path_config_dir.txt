@@ -1,0 +1,4 @@
+qtile
+alacritty
+trizen
+pycritty
