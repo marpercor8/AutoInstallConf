@@ -2,18 +2,17 @@
 
 Little script for copy your data and config files
 
-## Dependecies
-
-Python 3.X | Main script
-
-YAY | Install all packages even if is a aur package
-
-pacman | Query for all packages
+## Dependencies
+| Dependency | Description |
+|----------|:-------------:|
+|Python 3.X | Main script|
+|yay    | Install all packages even if is a aur package|
+|pacman | Query for all packages|
 
 
 ## Usage
 
-|VALUE|DESCRIPTION|
+| Value | Description |
 |----------|:-------------:|
 |`-h`| Display this section |
 |`-i`| Copy dotfiles dir into your home directory and install all packages from packages.txt |
