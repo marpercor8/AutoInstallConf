@@ -63,7 +63,7 @@ def load_config_user():
     print("Done.") 
 
 def copy_requeriments():
-    os.system("pip list > {}".format(CONFIG_LIST_PYTHON))
+    os.system("pip list | awk '{print $1}'" + ">  {}".format(CONFIG_LIST_PYTHON))
 
 
 def install():
