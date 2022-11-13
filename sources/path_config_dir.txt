@@ -1,0 +1,7 @@
+qtile
+alacritty
+trizen
+fish
+rofi
+volumeicon
+pavucontrol.ini

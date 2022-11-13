@@ -7,11 +7,11 @@ from os.path import expanduser
 LOCAL_DIRECTORY = os.getcwd()
 USER_DIRECTORY = expanduser("~")
 
-PACKAGE_LIST = "source/packages.txt"
-CONFIG_LIST_DIR = "path_config_dir.txt"
-CONFIG_LIST_DIR_SOURCE = "source/config_user"
-CONFIG_LIST_HOMEDIR  = "path_config_home.txt"
-CONFIG_LIST_HOMEDIR_SOURCE ="source/main_config"
+PACKAGE_LIST = "sources/packages.txt"
+CONFIG_LIST_HOMEDIR  = "sources/path_config_home.txt"
+CONFIG_LIST_DIR = "sources/path_config_dir.txt"
+CONFIG_LIST_DIR_SOURCE = "dotfiles/.config"
+CONFIG_LIST_HOMEDIR_SOURCE ="dotfiles"
 def main():
     pass
 
@@ -20,8 +20,6 @@ def install_packages():
   with open(PACKAGE_LIST, "r") as f:
         for l in f:
             os.system("trizen -Syua {}".format(l))
-
-  
 
 
 
@@ -50,10 +48,8 @@ def copy_all_packages():
 def load_config_user():
     copy_config_dir_user()
     copy_config_user_homedir()
-    #copy_all_packages()
+    copy_all_packages()
 
 if __name__ == '__main__':
-    main()
-
     load_config_user()
 
