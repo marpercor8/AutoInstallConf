@@ -70,9 +70,9 @@ def install():
 
 
 def install_packages():
-  with open(PACKAGE_LIST, "r") as f:
-        for l in f:
-            os.system("trizen -Syua {}".format(l))
+    with open(PACKAGE_LIST, "r") as f:
+         content = f.read()
+    os.system("yay -S {}".format(content.replace("\n", " ")))
 
 def install_config():
     first_dir = "{}/{}".format(LOCAL_DIRECTORY, CONFIG_LIST_HOMEDIR_SOURCE)
