@@ -6,7 +6,7 @@ Little script for copy your data and config files
 
 Python 3.X | Main script
 
-Trizen | Install all packages even if is a aur package
+YAY | Install all packages even if is a aur package
 
 pacman | Query for all packages
 
