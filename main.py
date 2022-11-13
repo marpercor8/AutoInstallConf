@@ -70,6 +70,8 @@ def install():
 
 
 def install_packages():
+
+
     with open(PACKAGE_LIST, "r") as f:
          content = f.read()
     os.system("yay -S {}".format(content.replace("\n", " ")))
@@ -77,7 +79,7 @@ def install_packages():
 def install_config():
     first_dir = "{}/{}".format(LOCAL_DIRECTORY, CONFIG_LIST_HOMEDIR_SOURCE)
     second_dir = "{}".format(USER_DIRECTORY)
-    os.system("cp -rf {}/.config {}/.config".format(first_dir, second_dir))
+    os.system("cp -Rf {}/.config {}/.config".format(first_dir, second_dir))
     with open(CONFIG_LIST_HOMEDIR, "r") as f:
         for config in f:
             first_dir = "{}/{}/{}".format(LOCAL_DIRECTORY, CONFIG_LIST_HOMEDIR_SOURCE, config.replace("\n", ""))
@@ -110,6 +112,6 @@ def copy_all_packages():
 
 if __name__ == '__main__':
     signal.signal(signal.SIGINT, signal_handler)
+    os.system("sh dependencias.sh")
     #main(sys.argv)
-    install_config()
 
