@@ -13,7 +13,7 @@ CONFIG_LIST_DIR = "sources/path_config_dir.txt"
 
 CONFIG_LIST_DIR_SOURCE = "dotfiles/.config"
 CONFIG_LIST_HOMEDIR_SOURCE ="dotfiles"
-
+CONFIG_LIST_PYTHON = "sources/requeriments.txt"
 
 def signal_handler(signum, frame):
     print("Are you sure stopping? [s/N]:")
@@ -58,7 +58,12 @@ def load_config_user():
     copy_config_user_homedir()
     print("Copying all packages into {}\n".format(PACKAGE_LIST).upper())
     copy_all_packages()
+    print("Copying all packages into {}\n".format(PACKAGE_LIST).upper())
+    copy_requeriments()
     print("Done.") 
+
+def copy_requeriments():
+    os.system("pip list > {}".format(CONFIG_LIST_PYTHON))
 
 
 def install():
@@ -112,6 +117,5 @@ def copy_all_packages():
 
 if __name__ == '__main__':
     signal.signal(signal.SIGINT, signal_handler)
-    os.system("sh dependencias.sh")
-    #main(sys.argv)
+    main(sys.argv)
 
