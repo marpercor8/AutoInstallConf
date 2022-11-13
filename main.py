@@ -58,12 +58,12 @@ def load_config_user():
     copy_config_user_homedir()
     print("Copying all packages into {}\n".format(PACKAGE_LIST).upper())
     copy_all_packages()
-    print("Copying all packages into {}\n".format(PACKAGE_LIST).upper())
+    print("Copying all python libs into {}\n".format(CONFIG_LIST_PYTHON).upper())
     copy_requeriments()
     print("Done.") 
 
 def copy_requeriments():
-    os.system("pip list | awk '{print $1}'" + ">  {}".format(CONFIG_LIST_PYTHON))
+    os.system("python -m pip freeze >  {}".format(CONFIG_LIST_PYTHON))
 
 
 def install():
@@ -71,8 +71,12 @@ def install():
     install_config()
     print("Installing all packages from {}".format(PACKAGE_LIST).upper())
     install_packages()
+    print("Installing all python libs from {}".format(PACKAGE_LIST).upper())
+    install_python_libs()
     print("Done.") 
 
+def install_python_libs():
+    os.system("pip install -r {}".format(CONFIG_LIST_PYTHON))
 
 def install_packages():
 
