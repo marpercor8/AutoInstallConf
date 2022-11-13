@@ -8,10 +8,8 @@ awesome
 base
 binutils
 bison
-cmake
 code
 debugedit
-doxygen
 emacs
 fakeroot
 feh
@@ -37,7 +35,6 @@ imwheel
 libtool
 linux
 linux-firmware
-linux-headers
 m4
 make
 man-db
@@ -50,7 +47,6 @@ network-manager-applet
 networkmanager
 open-vm-tools
 p7zip
-p7zip-gui
 pacman
 patch
 pavucontrol
@@ -79,11 +75,9 @@ udiskie
 volumeicon
 which
 xdg-user-dirs
-xerces-c
 xf86-input-libinput
 xf86-input-vmmouse
 xf86-video-vmware
-xml-security-c
 xorg-bdftopcf
 xorg-iceauth
 xorg-mkfontscale
