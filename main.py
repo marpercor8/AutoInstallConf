@@ -79,7 +79,7 @@ def install_packages():
 def install_config():
     first_dir = "{}/{}".format(LOCAL_DIRECTORY, CONFIG_LIST_HOMEDIR_SOURCE)
     second_dir = "{}".format(USER_DIRECTORY)
-    os.system("cp -Rf {}/.config {}/.config".format(first_dir, second_dir))
+    os.system("cp -Rf {}/.config {}".format(first_dir, second_dir))
     with open(CONFIG_LIST_HOMEDIR, "r") as f:
         for config in f:
             first_dir = "{}/{}/{}".format(LOCAL_DIRECTORY, CONFIG_LIST_HOMEDIR_SOURCE, config.replace("\n", ""))
