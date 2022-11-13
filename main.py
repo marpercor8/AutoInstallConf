@@ -99,7 +99,7 @@ def copy_config_user_homedir():
             os.system("cp -f {} {}".format(first_dir, second_dir))
             
 def copy_all_packages():
-    os.system("pacman -Qd | awk '{print $1}'" + "> {}/{}".format(LOCAL_DIRECTORY,PACKAGE_LIST))
+    os.system("pacman -Qe | awk '{print $1}'" + "> {}/{}".format(LOCAL_DIRECTORY,PACKAGE_LIST))
 
 
 
