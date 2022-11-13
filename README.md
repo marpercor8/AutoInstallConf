@@ -12,6 +12,7 @@ pacman | Query for all packages
 
 
 ## Usage
+
 |VALUE|DESCRIPTION|
 |----------|:-------------:|
 |`-h`| Display this section |
