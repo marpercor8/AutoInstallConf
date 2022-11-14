@@ -17,8 +17,11 @@ Little script for copy your data and config files
 |`-h`| Display this section |
 |`-i`| Copy dotfiles dir into your home directory and install all packages from packages.txt |
 |`-l`| Copy your dotfiles into this dir and copy packages into packages.txt |
+|`-d`| Only config files |
+|`-p`| Only python |
+|`-y`| Only packages |
 
-Example:
+Example installing config files and packages:
 ```
- ./main.py -i 
+ ./main.py -idp 
 ```
